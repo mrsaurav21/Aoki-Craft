@@ -1,0 +1,509 @@
+{
+  "pages":{
+      "shop":{
+          "sections":[
+              {
+                  "title":"Living Room",
+                  "data":[
+                    {
+                      "title":"Couch",
+                      "description":"Explore Now!",
+                      "image":"./images/couch.webp"   
+                  },
+                  {
+                      "title":"Tables",
+                      "description":"Explore Now!",
+                      "image":"./images/table.jpg"   
+                  },
+                  {
+                      "title":"Bookshelf",
+                      "description":"Explore Now!",
+                      "image":"./images/bookshelf.jpg"   
+                  },
+                  {
+                      "title":"Chandelier",
+                      "description":"Explore Now!",
+                      "image":"./images/Chandelier.jpg"   
+                  }
+                  ]
+              },
+              {
+                  "title":"Kitchen",
+                  "data":[
+                    {
+                      "title":"Cabinets",
+                      "description":"Explore Now!",
+                      "image":"./images/Cabinets.webp"
+                  },
+                  {
+                      "title":"CounterTops",
+                      "description":"Explore Now!",
+                      "image":"./images/countertop.jpg"   
+                  },
+                  {
+                      "title":"Sinks",
+                      "description":"Explore Now!",
+                      "image":"./images/sink.jpg"   
+                  },
+                  {
+                      "title":"Dinning Table",
+                      "description":"Explore Now!",
+                      "image":"./images/tables.jpg"   
+                  }
+                  ]
+              },{
+                "title":"BedRoom",
+                "data":[
+                    {
+                        "title":"Bed",
+                        "description":"Explore Now!",
+                        "image":"./images/Beds.jpg"  
+                    },
+                    {
+                        "title":"Tables",
+                        "description":"Explore Now!",
+                        "image":"./images/table.jpg"   
+                    },
+                    {
+                        "title":"Bookshelf",
+                        "description":"Explore Now!",
+                        "image":"./images/bookshelf.jpg"   
+                    },
+                    {
+                        "title":"Chandelier",
+                        "description":"Explore Now!",
+                        "image":"./images/Chandelier.jpg"   
+                    }
+                ]
+            }
+
+          ]
+      }
+  },
+  "footer":{
+      "items":[
+          {
+              "title":"Need Help",
+              "list":[
+                  {
+                      "label":"Contact Us",
+                      "path":"/contact-us"
+                  },
+                  {
+                      "label":"Track Order",
+                      "path":"/track-order"
+                  },
+                  {
+                      "label":"Returns & Refunds",
+                      "path":"/refunds"
+                  },
+                  {
+                      "label":"FAQ's",
+                      "path":"/faq"
+                  },
+                  {
+                      "label":"Career",
+                      "path":"/career"
+                  }
+              ]
+          },
+          {
+              "title":"Company",
+              "list":[
+                  {
+                      "label":"About Us",
+                      "path":"/about"
+                  },
+                  {
+                      "label":"Media",
+                      "path":"/media"
+                  }
+              ]
+          },
+          {
+              "title":"More Info",
+              "list":[
+                  {
+                      "label":"Term and Conditions",
+                      "path":"/terms-conditions"
+                  },
+                  {
+                      "label":"Privacy Policy",
+                      "path":"/policies"
+                  },
+                  {
+                      "label":"Shipping Policy",
+                      "path":"/policies"
+                  }
+              ]
+          },
+          {
+              "title":"Location",
+              "description":"Location Country"
+          }
+      ],
+      "copyright":"Copyright © 2024 Aokicraft"
+  },
+  "categories": [
+      {
+        "id": 1,
+        "name": "Interior",
+        "code": "MEN",
+        "path":"/Interior",
+        "description":"Interior Materials",
+        "types": [
+          {
+            "id": 1,
+            "name": "Shells",
+           
+            "description": "4X4 Shells"
+          },
+          {
+            "id": 2,
+            "name": "Pottery",
+            "description": "Pottery"
+          },
+          {
+            "id": 3,
+            "name": "Sculptures",
+            "description": "Sculptures"
+          },
+          {
+            "id": 4,
+            "name": "Posters",
+            "description": "Posters"
+          },
+          {
+            "id": 14,
+            "name": "Records",
+            "description": "Records"
+          }
+        ],
+        "meta_data":{
+          "colors":["Black", "White", "Purple", "Gray", "Blue","Red","Orange","Navy","Grey","Yellow","Pink","Green"],
+          "sizes":["S","M","L","XL","XXL"]
+        }
+      },
+      {
+        "id": 2,
+        "name": "Furniture",
+        "code": "WOMEN",
+        "path":"/Furniture",
+        "description":"Furniture Materials",
+        "types": [
+          {
+            "type_id": 6,
+            "code":"Bed",
+            "name": "BED",
+            "description":"DOUBLE BED"
+          },
+          {
+            "type_id": 7,
+            "code":"Table",
+            "name": "Table"
+          },
+          {
+            "type_id": 8,
+            "code":"Couch",
+            "name": "Couch"
+          },
+          {
+            "type_id": 9,
+            "code":"Chair",
+            "name": "Chair"
+          },
+          {
+            "type_id": 10,
+            "code":"Mirrors",
+            "name": "Mirrors"
+          },
+          {
+            "type_id": 11,
+            "code":"Chandelier",
+            "name": "Chandelier"
+          }
+        ],
+        "meta_data":{
+          "colors":["Black", "White", "Purple", "Gray", "Blue","Red","Orange","Navy","Grey","Yellow","Pink","Green"],
+          "sizes":["King","Queen","Tall","XL","XXL"]
+        }
+      }
+      
+        
+  ],
+  "products":[
+    {
+      "id": 1,
+      "title": "Black Sweatshirt",
+      "description": "100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with no pilling & no fading. Provide  all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.",
+      "category_id": 2,
+      "type_id": 10,
+      "brand": "Nike",
+      "price": 49.99,
+      "size": ["S", "M", "L"],
+      "color": ["Black","Blue"],
+      "discount": 20,
+      "thumbnail": "https://codedev.b-cdn.net/products/sweatshirt-black.jpg",
+      "images": ["https://codedev.b-cdn.net/products/sweatshirt-black.jpg", "https://codedev.b-cdn.net/products/woman-black-shirt-giving-neutral-flirtatious-poses.jpg","https://codedev.b-cdn.net/products/woman-holding-coffee-cup-smiling.jpg"],
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "title": "White T-shirt",
+      "description": "A stylish white t-shirt for women",
+      "category_id": 2,
+      "type_id": 9,
+      "brand": "TrendyWear",
+      "price": 29.99,
+      "size": ["S", "M", "L"],
+      "color": ["White"],
+      "discount": 15,
+      "images": ["https://codedev.b-cdn.net/products/tshirt-white.jpg", "https://codedev.b-cdn.net/products/tshirt-white.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/tshirt-white.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 3,
+      "title": "Purple Hoodie",
+      "description": "A cozy purple hoodie for women",
+      "category_id": 2,
+      "type_id": 10,
+      "brand": "Nike",
+      "price": 69.99,
+      "size": ["S", "M", "L"],
+      "color": ["Purple"],
+      "discount": 10,
+      "images": ["hoodie-purple1.jpg", "hoodie-purple2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/hoodie-purple.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 4,
+      "title": "Leaves Pattern White Dress",
+      "description": "A beautiful leaves pattern white dress for women",
+      "category_id": 2,
+      "type_id": 5,
+      "brand": "SummerVibes",
+      "price": 79.99,
+      "size": ["S", "M", "L"],
+      "color": ["White"],
+      "discount": 5,
+      "images": ["dress-white-leaves1.jpg", "dress-white-leaves2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/dress-white-leaves.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 5,
+      "title": "White Graphic Crop Top",
+      "description": "A trendy white graphic crop top for women",
+      "category_id": 2,
+      "type_id": 9,
+      "brand": "TrendyWear",
+      "price": 39.99,
+      "size": ["S", "M", "L"],
+      "color": ["White"],
+      "discount": 10,
+      "images": ["crop-top-white1.jpg", "crop-top-white2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/crop-top-white.jpeg",
+      "rating": 4.3
+    },
+    {
+      "id": 6,
+      "title": "Black Shorts",
+      "description": "Stylish black shorts for women",
+      "category_id": 2,
+      "type_id": 7,
+      "brand": "Nike",
+      "price": 34.99,
+      "size": ["S", "M", "L"],
+      "color": ["Black"],
+      "discount": 15,
+      "images": ["shorts-black1.jpg", "shorts-black2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/shorts-black.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 7,
+      "title": "Women's Skinny Jeans",
+      "description": "Trendy women's skinny jeans for a stylish look",
+      "category_id": 2,
+      "type_id": 8,
+      "brand": "ChicStyle",
+      "price": 59.99,
+      "size": ["S", "M", "L"],
+      "color": ["Blue"],
+      "discount": 10,
+      "images": ["jeans-blue1.jpg", "jeans-blue2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/jeans-blue.jpeg",
+      "rating": 4.8
+    },
+    {
+      "id": 8,
+      "title": "Crewneck Sweatshirt",
+      "description": "Comfortable crewneck sweatshirt for women",
+      "category_id": 2,
+      "type_id": 10,
+      "brand": "TrendyWear",
+      "price": 44.99,
+      "size": ["S", "M", "L"],
+      "color": ["Gray"],
+      "discount": 10,
+      "images": ["sweatshirt-gray1.jpg", "sweatshirt-gray2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/sweatshirt-crewneck.jpeg",
+      "rating": 4.6
+    },
+    {
+      "id": 9,
+      "title": "Denim Shorts",
+      "description": "Stylish denim shorts for women",
+      "category_id": 2,
+      "type_id": 7,
+      "brand": "SummerVibes",
+      "price": 39.99,
+      "size": ["S", "M", "L"],
+      "color": ["Blue"],
+      "discount": 15,
+      "images": ["shorts-denim1.jpg", "shorts-denim2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/shorts-denim.jpeg",
+      "rating": 4.7
+    },
+    {
+      "id": 10,
+      "title": "Black Plain T-shirt",
+      "description": "Classic black plain t-shirt for women",
+      "category_id": 2,
+      "type_id": 9,
+      "brand": "Nike",
+      "price": 24.99,
+      "size": ["S", "M", "L"],
+      "color": ["Black"],
+      "discount": 10,
+      "images": ["tshirt-black1.jpg", "tshirt-black2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/tshirt-black.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 11,
+      "title": "Blue Flower Print Crop Top",
+      "description": "Stylish blue flower print crop top for women",
+      "category_id": 2,
+      "type_id": 9,
+      "brand": "TrendyWear",
+      "price": 34.99,
+      "size": ["S", "M", "L"],
+      "color": ["Blue"],
+      "discount": 15,
+      "images": ["crop-top-blue-flower1.jpg", "crop-top-blue-flower2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/crop-top-blue-flower.jpeg",
+      "rating": 4.3
+    },
+    {
+      "id": 12,
+      "title": "Black Crop Top",
+      "description": "Stylish black crop top for women",
+      "category_id": 2,
+      "type_id": 9,
+      "brand": "TrendyWear",
+      "price": 29.99,
+      "size": ["S", "M", "L"],
+      "color": ["Black"],
+      "discount": 10,
+      "images": ["crop-top-black1.jpg", "crop-top-black2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/crop-top-black.jpeg",
+      "rating": 4.2
+    },
+    {
+      "id": 13,
+      "title": "Black T-Shirt",
+      "description": "Classic black t-shirt for men",
+      "category_id": 1,
+      "type_id": 4,
+      "brand": "Nike",
+      "price": 24.99,
+      "size": ["M", "L", "XL"],
+      "color": ["Black"],
+      "discount": 10,
+      "images": ["black-tshirt1.jpg", "black-tshirt2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/black-tshirt.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 14,
+      "title": "White Hoodie",
+      "description": "Comfortable white hoodie for men",
+      "category_id": 1,
+      "type_id": 14,
+      "brand": "Adidas",
+      "price": 59.99,
+      "size": ["M", "L", "XL"],
+      "color": ["White"],
+      "discount": 15,
+      "images": ["white-hoodie1.jpg", "white-hoodie2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/white-hoodie.jpeg",
+      "rating": 4.7
+    },
+    {
+      "id": 15,
+      "title": "Blue Jeans",
+      "description": "Stylish blue jeans for men",
+      "category_id": 1,
+      "type_id": 1,
+      "brand": "Levis",
+      "price": 49.99,
+      "size": ["M", "L", "XL"],
+      "color": ["Blue"],
+      "discount": 20,
+      "images": ["blue-jeans1.jpg", "blue-jeans2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/blue-jeans.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 16,
+      "title": "Gray Shorts",
+      "description": "Comfortable gray shorts for men",
+      "category_id": 1,
+      "type_id": 3,
+      "brand": "Puma",
+      "price": 29.99,
+      "size": ["M", "L", "XL"],
+      "color": ["Gray"],
+      "discount": 10,
+      "images": ["gray-shorts1.jpg", "gray-shorts2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/gray-shorts.jpg",
+      "rating": 4.4
+    },
+    {
+      "id": 17,
+      "title": "Black Hoodie",
+      "description": "Comfortable black hoodie for men",
+      "category_id": 1,
+      "type_id": 14,
+      "brand": "Adidas",
+      "price": 59.99,
+      "size": ["M", "L", "XL"],
+      "color": ["Black"],
+      "discount": 15,
+      "images": ["black-hoodie1.jpg", "black-hoodie2.jpg"],
+      "thumbnail": "https://codedev.b-cdn.net/products/black-hoodie.jpeg",
+      "rating": 4.8
+    },
+    {
+      "id": 18,
+      "title": "Black Royal Bed",
+      "description": "100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with no pilling & no fading. Provide  all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.",
+      "category_id": 2,
+      "type_id": 6,
+      "brand": "Nike",
+      "price": 49999,
+      
+      "color": ["Black","Blue"],
+      "discount": 20,
+      "thumbnail": "https://www.ikea.com/in/en/images/products/idanaes-upholstered-storage-bed-gunnared-dark-grey__1101383_pe866643_s5.jpg?f=xl",
+      "images": ["https://www.ikea.com/in/en/images/products/idanaes-upholstered-storage-bed-gunnared-dark-grey__1024755_pe833651_s5.jpg?f=xl", "https://www.ikea.com/in/en/images/products/idanaes-upholstered-storage-bed-gunnared-dark-grey__1101398_pe866658_s5.jpg?f=xl","https://www.ikea.com/in/en/images/products/idanaes-upholstered-storage-bed-gunnared-dark-grey__1079024_pe857417_s5.jpg?f=xl"],
+      "rating": 4.5
+    }
+
+
+  ]
+
+}
