@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react';
 import FilterIcon from '../../components/common/FilterIcon';
 import content from '../../data/content.json';
 import Categories from '../../components/Filters/Categories';
@@ -8,80 +8,87 @@ import SizeFilter from '../../components/Filters/SizeFilter';
 import ProductCard from './ProductCard';
 import { getAllProducts } from '../../api/fetchProducts';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLoading } from '../../store/features/common'
+import { setLoading } from '../../store/features/common';
+
 const categories = content?.categories;
 
-const ProductListPage = ({categoryType}) => {
+const ProductListPage = ({ categoryType }) => {
 
-  const categoryData = useSelector((state)=> state?.categoryState?.categories);
+  const categoryData = useSelector(state => state?.categoryState?.categories);
   const dispatch = useDispatch();
-  const [products,setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
-  const categoryContent = useMemo(()=>{
-    return categories?.find((category)=> category.code === categoryType);
-  },[categoryType]);
-  
-  const productListItems = useMemo(()=>{
-    return content?.products?.filter((product)=> product?.category_id === categoryContent?.id );
-  },[categoryContent]);
+  // Static content mapping
+  const categoryContent = useMemo(() => {
+    return categories?.find(category => category.code === categoryType);
+  }, [categoryType]);
 
-  const category = useMemo(()=>{
-    return categoryData?.find(element => element?.code === categoryType);
-  },[categoryData, categoryType]);
+  // Backend category mapping
+  const category = useMemo(() => {
+    return categoryData?.find(item => item?.code === categoryType);
+  }, [categoryData, categoryType]);
 
-  useEffect(()=>{
+  // ✅ FIXED: block API call until category exists
+  useEffect(() => {
+    if (!category) return;
+
     dispatch(setLoading(true));
-    getAllProducts(category?.id).then(res=>{
-      setProducts(res);
-    }).catch(err=>{
-      
-    }).finally(()=>{
-      dispatch(setLoading(false));
-    })
-    
-  },[category?.id, dispatch]);
 
+    getAllProducts(category.id)
+      .then(res => {
+        setProducts(res || []);
+      })
+      .catch(err => {
+        console.error(err);
+      })
+      .finally(() => {
+        dispatch(setLoading(false));
+      });
+
+  }, [category, dispatch]);
 
   return (
     <div>
-        <div className='flex'>
-            <div className='w-[20%] p-[10px] border rounded-lg m-[20px]'>
-                {/* Filters */}
-                <div className='flex justify-between '>
-                <p className='text-[16px] text-gray-600'>Filter</p>
-                <FilterIcon />
-                
-                </div>
-                <div>
-                  {/* Product types */}
-                <p className='text-[16px] text-black mt-5'>Categories</p>
-                <Categories types={categoryContent?.types}/>
-                <hr></hr>
-                </div>
-                  {/* Price */}
-                  <PriceFilter />
-                  <hr></hr>
-                  {/* Colors */}
-                  <ColorsFilter colors={categoryContent?.meta_data?.colors}/>
-                  <hr></hr>
-                   {/* Sizes */}
-                   <SizeFilter sizes={categoryContent?.meta_data?.sizes}/>
-            </div>
+      <div className="flex">
+        
+        {/* FILTERS */}
+        <div className="w-[20%] p-[10px] border rounded-lg m-[20px]">
+          <div className="flex justify-between">
+            <p className="text-[16px] text-gray-600">Filter</p>
+            <FilterIcon />
+          </div>
 
-            <div className='p-[15px]'>
-            <p className='text-black text-lg'>{category?.description}</p>
-                {/* Products */}
-                <div className='pt-4 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 px-2'>
-                {products?.map((item,index)=>(
-                  <ProductCard key={item?.id+"_"+index} {...item} title={item?.name}/>
-                ))}
-                </div>
+          <p className="text-[16px] text-black mt-5">Categories</p>
+          <Categories types={categoryContent?.types} />
+          <hr />
 
-            </div>
+          <PriceFilter />
+          <hr />
 
+          <ColorsFilter colors={categoryContent?.meta_data?.colors} />
+          <hr />
+
+          <SizeFilter sizes={categoryContent?.meta_data?.sizes} />
         </div>
-    </div>
-  )
-}
 
-export default ProductListPage
+        {/* PRODUCTS */}
+        <div className="p-[15px] w-full">
+          <p className="text-black text-lg">{category?.description}</p>
+
+          <div className="pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-2">
+            {products.map((item, index) => (
+              <ProductCard
+                key={`${item.id}_${index}`}
+                {...item}
+                title={item.name}
+              />
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default ProductListPage;
