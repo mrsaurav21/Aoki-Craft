@@ -27,7 +27,7 @@ public class WebSecurityConfig {
     @Autowired
     private JWTTokenHelper jwtTokenHelper;
 
-    private static final String[] publicApis = {
+    private static final String[] PUBLIC_APIS = {
             "/api/auth/**"
     };
 
@@ -35,26 +35,39 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
+            // Disable CSRF (JWT + API based)
             .csrf(AbstractHttpConfigurer::disable)
 
+            // Authorization rules
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                         "/v3/api-docs/**",
                         "/swagger-ui/**",
                         "/swagger-ui.html",
+
+                        // OAuth endpoints
                         "/oauth2/**",
                         "/login/**",
                         "/oauth2/success"
                 ).permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/products", "/api/category").permitAll()
+
+                // Public GET APIs
+                .requestMatchers(
+                        HttpMethod.GET,
+                        "/api/products",
+                        "/api/category"
+                ).permitAll()
+
+                // Everything else needs authentication
                 .anyRequest().authenticated()
             )
 
-            // ✅ CORRECT OAuth2 ENABLEMENT
+            // Google OAuth2 Login
             .oauth2Login(oauth2 -> oauth2
                 .defaultSuccessUrl("/oauth2/success", true)
             )
 
+            // JWT Filter
             .addFilterBefore(
                 new JWTAuthenticationFilter(jwtTokenHelper, userDetailsService),
                 UsernamePasswordAuthenticationFilter.class
@@ -63,11 +76,13 @@ public class WebSecurityConfig {
         return http.build();
     }
 
+    // Ignore auth APIs completely (no Spring Security filter)
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return web -> web.ignoring().requestMatchers(publicApis);
+        return web -> web.ignoring().requestMatchers(PUBLIC_APIS);
     }
 
+    // Authentication manager
     @Bean
     public AuthenticationManager authenticationManager() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -76,6 +91,7 @@ public class WebSecurityConfig {
         return new ProviderManager(provider);
     }
 
+    // Password encoder
     @Bean
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
